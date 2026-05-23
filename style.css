@@ -1114,10 +1114,9 @@ body {
     .hero-split-layout {
         grid-template-columns: 1fr;
         gap: 50px;
-        text-align: center;
     }
     .hero-text-block {
-        align-items: center;
+        align-items: flex-start; /* Keep contents left-aligned */
     }
     .section-layout {
         grid-template-columns: 1fr;
@@ -1163,7 +1162,7 @@ body {
     .countdown-display {
         gap: 6px;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start; /* Align with left-aligned text */
     }
     .time-block {
         min-width: 48px;
@@ -1190,6 +1189,21 @@ body {
     }
     #chandelier-canvas {
         height: 350px;
+    }
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    #operations .btn-primary {
+        width: 100%;
+        text-align: center;
+        display: block !important;
     }
     .footer-bar {
         grid-template-columns: 1fr;
