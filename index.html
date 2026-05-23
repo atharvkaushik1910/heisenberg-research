@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEISENBERG RESEARCH | Fault-Tolerant Quantum Computing</title>
+    <meta name="description" content="Heisenberg Research is building full-stack quantum computers based on stabilized cat qubits. Suppressing bit-flips at the hardware level.">
+    
+    <!-- Google Fonts: Outfit (Clean Geometric Sans) & Share Tech Mono (Crisp Tech/Data Monospace) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Share+Tech+Mono&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css?v=9">
+</head>
+<body>
+    <!-- Background Particle Veil -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation Header (Corporate Defense Contractor Vibe) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-symbol">H</span>
+                <span class="logo-text">HEISENBERG <span class="logo-accent">RESEARCH</span></span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#intro-countdown" class="nav-link">TELEMETRY</a>
+                <a href="#why-cat-qubits" class="nav-link">WHY CAT QUBITS</a>
+                <a href="#architecture" class="nav-link">SYSTEM STACK</a>
+                <a href="#roadmap" class="nav-link">ROADMAP</a>
+                <a href="#clearance" class="btn-cta">PARTNERSHIPS</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-content">
+        <!-- SECTION 1: HERO (Video Background & Branding) -->
+        <section id="hero" class="scroll-section hero-video-section">
+            <!-- Background video playing in loop -->
+            <video autoplay muted loop playsinline class="hero-video-bg">
+                <source src="assets/hero-bg.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+
+            <!-- Bottom Left Corporate Branding -->
+            <div class="hero-bottom-left">
+                <h1 class="hero-brand-title">HEISENBERG RESEARCH</h1>
+                <p class="hero-brand-subtitle">ACHIEVING THE IMPOSSIBLE</p>
+                <p class="hero-brand-tag">BUILDING FAULT-TOLERANT QUANTUM COMPUTING WITH CAT QUBITS</p>
+            </div>
+
+            <!-- Scroll Indicator to Section 2 -->
+            <div class="scroll-prompt" onclick="document.getElementById('intro-countdown').scrollIntoView({behavior: 'smooth'})">
+                <span class="prompt-text">ENTER CORE</span>
+                <svg class="chevron-down" viewBox="0 0 24 24">
+                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" fill="#00ff66" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Q-DAY CALIBRATION (Relocated Countdown & 3D Core) -->
+        <section id="intro-countdown" class="scroll-section">
+            <div class="hero-split-layout">
+                
+                <!-- Left Column: The Threat & The Clock -->
+                <div class="hero-text-block">
+                    <div class="tagline-badge">
+                        <span class="tagline-dot"></span>
+                        POST-QUANTUM DEFENSE INITIATIVE
+                    </div>
+                    
+                    <h2 class="hero-title" style="font-size: 56px; font-weight: 800; line-height: 1.1; margin-bottom: 20px;">FAULT-TOLERANT COMPUTING COUNTDOWN</h2>
+                    <p class="hero-lead">
+                        Heisenberg Research is a full-stack quantum computing company developing hardware-efficient fault-tolerant architectures based on stabilized cat qubits.
+                    </p>
+                    <p class="hero-lead" style="margin-top: -10px; font-size: 15px; color: var(--color-text-muted);">
+                        We build the quantum processor, control systems, compiler stack, and runtime infrastructure required to scale logical quantum computing from research to real-world applications.
+                    </p>
+                    
+                    <!-- Live Ticking Countdown Timer with Glitch Engine -->
+                    <div class="countdown-display" id="countdown">
+                        <div class="time-block">
+                            <span class="digits" id="timer-years">01</span>
+                            <span class="unit-label">YEARS</span>
+                        </div>
+                        <span class="colon">:</span>
+                        <div class="time-block">
+                            <span class="digits" id="timer-months">11</span>
+                            <span class="unit-label">MONTHS</span>
+                        </div>
+                        <span class="colon">:</span>
+                        <div class="time-block">
+                            <span class="digits" id="timer-days">04</span>
+                            <span class="unit-label">DAYS</span>
+                        </div>
+                        <span class="colon">:</span>
+                        <div class="time-block">
+                            <span class="digits" id="timer-hours">18</span>
+                            <span class="unit-label">HOURS</span>
+                        </div>
+                        <span class="colon">:</span>
+                        <div class="time-block">
+                            <span class="digits" id="timer-minutes">12</span>
+                            <span class="unit-label">MINUTES</span>
+                        </div>
+                        <span class="colon">:</span>
+                        <div class="time-block highlight">
+                            <span class="digits" id="timer-seconds">00</span>
+                            <span class="unit-label">SECONDS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="Achieving-the-Impossible-Heisenberg-Research-Whitepaper.pdf" target="_blank" class="btn-primary">READ WHITEPAPER</a>
+                        <a href="Achieving-the-Impossible-Heisenberg-Research-Whitepaper.pdf" target="_blank" class="btn-secondary">EXPLORE ARCHITECTURE</a>
+                        <a href="#clearance" class="btn-secondary" style="border-color: var(--color-neon); color: var(--color-neon);">REQUEST PARTNERSHIP</a>
+                    </div>
+
+                    <!-- Telemetry Readouts Card -->
+                    <div class="telemetry-hud-card" style="margin-top: 35px; width: 100%; max-width: 580px; padding: 20px; font-size: 13px;">
+                        <p style="margin-bottom: 12px; color: var(--color-text-title); font-style: italic;">
+                            The transition from noisy quantum devices to scalable logical quantum systems has begun.
+                        </p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-family: var(--font-mono); font-size: 11px;">
+                            <div><span class="pulse-dot"></span> CRYOGENIC CORE: <span class="glow-value">OPERATIONAL</span></div>
+                            <div><span class="pulse-dot"></span> QUANTUM RUNTIME: <span class="glow-value">ACTIVE</span></div>
+                            <div style="grid-column: span 2;"><span class="pulse-dot"></span> LOGICAL ARCHITECTURE: <span class="glow-value">INITIALIZING</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Dilution Refrigerator (Chandelier) -->
+                <div class="hero-visual-block">
+                    <div class="chandelier-frame">
+                        <div class="system-status-indicator">
+                            <span class="status-pulse"></span>
+                            <span class="status-lbl">CRYOGENIC PILE ASSEMBLY STATUS: <span id="assembly-pct">0%</span></span>
+                        </div>
+                        <!-- Canvas drawing the golden quantum computer -->
+                        <canvas id="chandelier-canvas"></canvas>
+                        
+                        <div class="control-hints">
+                            <span class="hint-text">CLICK AND DRAG TO TILT CORE</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Scroll Indicator to Section 1 -->
+            <div class="scroll-prompt" onclick="document.getElementById('briefing').scrollIntoView({behavior: 'smooth'})">
+                <span class="prompt-text">SCROLL TO EXPLORE</span>
+                <svg class="chevron-down" viewBox="0 0 24 24">
+                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" fill="#00ff66" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SECTION 01 — THE PROBLEM (Cat State & Wigner chart) -->
+        <section id="briefing" class="scroll-section">
+            <div class="section-layout">
+                <div class="col-content reveal-left">
+                    <div class="section-header">
+                        <span class="section-index">01 // THE PROBLEM</span>
+                        <h2 class="section-title">Classical Computing Has Limits</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                    
+                    <div class="briefing-text-card">
+                        <p>
+                            Modern computing has transformed science, industry, and civilization itself. But some problems remain fundamentally beyond the reach of even the largest classical supercomputers.
+                        </p>
+                        <p>
+                            Accurate molecular simulation, large-scale optimization, quantum chemistry, advanced materials, cryptography, and complex physical systems all scale exponentially on classical hardware.
+                        </p>
+                        <p>
+                            Quantum computing offers a fundamentally new computational model — but building a useful quantum computer requires solving one of the hardest engineering problems ever attempted: <strong>Fault tolerance.</strong>
+                        </p>
+                        
+                        <h3 style="font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--color-text-title); margin: 25px 0 10px 0; border-top: var(--border-clean); padding-top: 20px;">
+                            Error Correction Is the Bottleneck
+                        </h3>
+                        <p style="font-size: 14.5px; color: var(--color-text-muted);">
+                            Quantum systems are naturally fragile. Environmental noise, decoherence, thermal interactions, and operational imperfections introduce errors continuously during computation.
+                        </p>
+                        <p style="font-size: 14.5px; color: var(--color-text-muted);">
+                            Traditional superconducting architectures require extremely large error-correction overheads, often demanding thousands of physical qubits to create a single reliable logical qubit. This scaling challenge is the defining bottleneck of the industry. Heisenberg Research is developing a fundamentally different approach.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-visual reveal-right">
+                    <div class="visualization-box">
+                        <div class="box-header">
+                            <span>PHASE-SPACE DENSITY MAP [WIGNER FUNCTION]</span>
+                            <span class="status-indicator">STABILIZATION ACTIVE</span>
+                        </div>
+                        <div class="box-body">
+                            <canvas id="cat-state-canvas"></canvas>
+                            <div class="hud-overlay">
+                                <div class="hud-item top-l">|ψ⟩ = N(|α⟩ + e<sup>iφ</sup>|-α⟩)</div>
+                                <div class="hud-item bottom-r">COHERENCE: SHIELDED</div>
+                                <div class="hud-circle-scanner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SECTION 02 — WHY CAT QUBITS [NEW] -->
+        <section id="why-cat-qubits" class="scroll-section">
+            <div class="section-layout full-width">
+                <div class="section-header center">
+                    <span class="section-index">02 // WHY CAT QUBITS</span>
+                    <h2 class="section-title">Hardware-Efficient Fault Tolerance</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="blueprint-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <!-- Column 1 -->
+                    <div class="blueprint-card">
+                        <div class="card-num">01</div>
+                        <h3>Hardware-Efficient Fault Tolerance</h3>
+                        <p>Heisenberg Research develops stabilized cat qubit architectures designed to dramatically reduce the overhead required for quantum error correction.</p>
+                        <p>Instead of treating all quantum errors equally, cat qubits introduce a strong noise bias that exponentially suppresses bit-flip errors at the hardware layer.</p>
+                        <p>This transforms quantum error correction from a two-dimensional problem into a far more hardware-efficient one-dimensional architecture.</p>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="blueprint-card">
+                        <div class="card-num">02</div>
+                        <h3>Autonomous Stabilization</h3>
+                        <p>Our architecture encodes quantum information inside coherent states stabilized within superconducting microwave resonators using engineered two-photon dissipation mechanisms.</p>
+                        <p>This autonomous stabilization continuously protects quantum information directly at the physical layer.</p>
+                        <div class="card-status" style="margin-top: 15px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; font-size: 11px;">
+                            <div><span class="pulse-dot"></span> Reduced physical-to-logical overhead</div>
+                            <div><span class="pulse-dot"></span> More scalable logical qubits</div>
+                            <div><span class="pulse-dot"></span> Lower energy consumption</div>
+                            <div><span class="pulse-dot"></span> Simpler error-correction architectures</div>
+                            <div><span class="pulse-dot"></span> Faster routes toward useful computation</div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="blueprint-card">
+                        <div class="card-num">03</div>
+                        <h3>From 2D to 1D Architectures</h3>
+                        <p>Conventional superconducting systems rely heavily on surface-code architectures requiring large two-dimensional qubit grids.</p>
+                        <p>Cat qubits allow error correction to operate in one dimension through repetition-code approaches while remaining compatible with advanced LDPC connectivity strategies.</p>
+                        <p>This significantly reduces the hardware complexity required for scalable fault-tolerant systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: SECTION 03 — FULL STACK ARCHITECTURE -->
+        <section id="architecture" class="scroll-section">
+            <div class="section-layout full-width">
+                <div class="section-header center reveal-fade">
+                    <span class="section-index">03 // FULL STACK ARCHITECTURE</span>
+                    <h2 class="section-title">The Heisenberg Quantum Stack</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="blueprint-grid">
+                    <!-- Layer 1 -->
+                    <div class="blueprint-card reveal-card" data-node="0">
+                        <div class="card-num">01</div>
+                        <h3>QUANTUM PROCESSOR LAYER</h3>
+                        <p>Stabilized cat qubits implemented inside superconducting microwave resonators operating at cryogenic temperatures.</p>
+                        <div class="card-status" style="display: flex; flex-direction: column; gap: 4px; align-items: flex-start; font-size: 10px; color: var(--color-text-muted);">
+                            <div><span class="pulse-dot"></span> Superconducting resonators</div>
+                            <div><span class="pulse-dot"></span> Two-photon stabilization</div>
+                            <div><span class="pulse-dot"></span> High-coherence cavity systems</div>
+                        </div>
+                    </div>
+
+                    <!-- Layer 2 -->
+                    <div class="blueprint-card reveal-card" data-node="1">
+                        <div class="card-num">02</div>
+                        <h3>CRYOGENIC & MICROWAVE CONTROL</h3>
+                        <p>Real-time microwave control infrastructure designed for logical-state stabilization and quantum system orchestration.</p>
+                        <div class="card-status" style="display: flex; flex-direction: column; gap: 4px; align-items: flex-start; font-size: 10px; color: var(--color-text-muted);">
+                            <div><span class="pulse-dot"></span> RF pulse engineering</div>
+                            <div><span class="pulse-dot"></span> FPGA-based feedback systems</div>
+                            <div><span class="pulse-dot"></span> Error-syndrome monitoring</div>
+                        </div>
+                    </div>
+
+                    <!-- Layer 3 -->
+                    <div class="blueprint-card reveal-card" data-node="2">
+                        <div class="card-num">03</div>
+                        <h3>QUANTUM RUNTIME & COMPILER</h3>
+                        <p>A custom software stack translating high-level quantum circuits into optimized physical operations.</p>
+                        <div class="card-status" style="display: flex; flex-direction: column; gap: 4px; align-items: flex-start; font-size: 10px; color: var(--color-text-muted);">
+                            <div><span class="pulse-dot"></span> Pulse compilation</div>
+                            <div><span class="pulse-dot"></span> Logical qubit scheduling</div>
+                            <div><span class="pulse-dot"></span> Error mitigation routines</div>
+                        </div>
+                    </div>
+
+                    <!-- Layer 4 -->
+                    <div class="blueprint-card reveal-card" data-node="3">
+                        <div class="card-num">04</div>
+                        <h3>QUANTUM APPLICATIONS LAYER</h3>
+                        <p>The long-term objective of the Heisenberg platform is enabling commercially meaningful quantum computation across scientific and industrial domains.</p>
+                        <div class="card-status" style="display: flex; flex-direction: column; gap: 4px; align-items: flex-start; font-size: 10px; color: var(--color-text-muted);">
+                            <div><span class="pulse-dot"></span> Quantum chemistry & materials</div>
+                            <div><span class="pulse-dot"></span> Optimization & energy research</div>
+                            <div><span class="pulse-dot"></span> Drug discovery / machine learning</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blueprint-schematic-box reveal-fade">
+                    <div class="schematic-header">CRYOGENIC INSTRUMENTATION AND CONTROL PATHWAY [SCHEM-08]</div>
+                    <div class="schematic-svg-container">
+                        <svg class="schematic-svg" viewBox="0 0 800 200">
+                            <!-- Dilution Fridge -->
+                            <rect class="schem-element" x="50" y="20" width="80" height="150" fill="none" stroke="#00ff66" stroke-width="1.5" stroke-dasharray="4 2"/>
+                            <text x="90" y="40" fill="#00ff66" font-family="'Share Tech Mono'" font-size="10" text-anchor="middle">CRYOSTAT PILE</text>
+                            
+                            <!-- Coaxial cables -->
+                            <path class="schem-line" d="M 130 50 L 300 50" fill="none" stroke="#00ff66" stroke-width="1" stroke-dasharray="8 4"/>
+                            <path class="schem-line" d="M 130 90 L 300 90" fill="none" stroke="#00ff66" stroke-width="1"/>
+                            <path class="schem-line" d="M 130 130 L 300 130" fill="none" stroke="#00ff66" stroke-width="1" stroke-dasharray="8 4"/>
+                            
+                            <!-- SNAIL / Cavity Qubit Box -->
+                            <rect class="schem-element" x="300" y="30" width="200" height="130" fill="none" stroke="#00ff66" stroke-width="2"/>
+                            <text x="400" y="55" fill="#00ff66" font-family="'Outfit'" font-size="12" text-anchor="middle" font-weight="bold">CAT STATE CORE</text>
+                            <circle class="schem-element" cx="360" cy="100" r="20" fill="none" stroke="#00ff66" stroke-dasharray="4 2"/>
+                            <circle class="schem-element" cx="440" cy="100" r="20" fill="none" stroke="#00ff66" stroke-dasharray="4 2"/>
+                            <line class="schem-line" x1="380" y1="100" x2="420" y2="100" stroke="#00ff66" stroke-width="1.5"/>
+                            <text x="360" y="104" fill="#00ff66" font-family="'Share Tech Mono'" font-size="9" text-anchor="middle">|+α⟩</text>
+                            <text x="440" y="104" fill="#00ff66" font-family="'Share Tech Mono'" font-size="9" text-anchor="middle">|-α⟩</text>
+
+                            <!-- Control lines output to compiler -->
+                            <path class="schem-line" d="M 500 80 L 670 80" fill="none" stroke="#00ff66" stroke-width="1.5"/>
+                            <path class="schem-line" d="M 500 110 L 670 110" fill="none" stroke="#00ff66" stroke-width="1.5" stroke-dasharray="4 2"/>
+                            
+                            <!-- Compiler & Host Interface -->
+                            <rect class="schem-element" x="670" y="40" width="100" height="110" fill="none" stroke="#00ff66" stroke-width="1.5" stroke-dasharray="6 3"/>
+                            <text x="720" y="70" fill="#00ff66" font-family="'Share Tech Mono'" font-size="11" text-anchor="middle">HEISENBERG</text>
+                            <text x="720" y="85" fill="#00ff66" font-family="'Share Tech Mono'" font-size="11" text-anchor="middle">COMPILER OS</text>
+                            <rect class="schem-element" x="685" y="105" width="70" height="30" fill="none" stroke="#00ff66" stroke-width="1"/>
+                            <text x="720" y="123" fill="#00ff66" font-family="'Share Tech Mono'" font-size="10" text-anchor="middle" class="blink">LOCK</text>
+                            
+                            <!-- Animated pulse dots -->
+                            <circle id="pulse-signal-1" cx="130" cy="90" r="3" fill="#00ff66" />
+                            <circle id="pulse-signal-2" cx="500" cy="80" r="3" fill="#00ff66" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: SECTION 04 — ROADMAP [NEW] -->
+        <section id="roadmap" class="scroll-section">
+            <div class="section-layout full-width">
+                <div class="section-header center">
+                    <span class="section-index">04 // TIMELINE</span>
+                    <h2 class="section-title">Toward Useful Quantum Computing</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="roadmap-grid">
+                    <!-- Phase 1 -->
+                    <div class="blueprint-card" style="border-color: rgba(0, 255, 102, 0.45); transform: none;">
+                        <div class="card-num" style="color: var(--color-neon);">PHASE 1</div>
+                        <h3 style="font-size: 15px; letter-spacing: 1px;">Stabilized Physical Cat Qubits</h3>
+                        <p style="font-size: 13px; line-height: 1.5; min-height: 72px;">Theoretical architecture is fully completed. Commencing physical hardware development and experimental validation.</p>
+                        <div class="card-status" style="color: var(--color-neon); font-size: 10px;"><span class="pulse-dot"></span> STATUS: DEVELOPMENT INITIATED</div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="blueprint-card" style="border-color: rgba(245, 158, 11, 0.45); transform: none;">
+                        <div class="card-num" style="color: #f59e0b;">PHASE 2</div>
+                        <h3 style="font-size: 15px; letter-spacing: 1px;">Early Logical Qubit Demonstration</h3>
+                        <p style="font-size: 13px; line-height: 1.5; min-height: 72px;">Implementation of noise-biased logical encoding with repetition-code architectures.</p>
+                        <div class="card-status" style="color: #f59e0b; font-size: 10px;"><span class="pulse-dot" style="background-color: #f59e0b;"></span> STATUS: IN DEVELOPMENT</div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="blueprint-card" style="transform: none;">
+                        <div class="card-num">PHASE 3</div>
+                        <h3 style="font-size: 15px; letter-spacing: 1px;">Fault-Tolerant Logical Operations</h3>
+                        <p style="font-size: 13px; line-height: 1.5; min-height: 72px;">Demonstration of scalable logical gate operations with reduced error-correction overhead.</p>
+                        <div class="card-status" style="color: var(--color-text-muted); font-size: 10px;"><span class="pulse-dot" style="background-color: var(--color-text-muted);"></span> STATUS: RESEARCH</div>
+                    </div>
+
+                    <!-- Phase 4 -->
+                    <div class="blueprint-card" style="transform: none;">
+                        <div class="card-num">PHASE 4</div>
+                        <h3 style="font-size: 15px; letter-spacing: 1px;">Multi-Logical-Qubit Systems</h3>
+                        <p style="font-size: 13px; line-height: 1.5; min-height: 72px;">Expansion toward interconnected logical architectures with LDPC-compatible connectivity.</p>
+                        <div class="card-status" style="color: var(--color-text-muted); font-size: 10px;"><span class="pulse-dot" style="background-color: var(--color-text-muted);"></span> STATUS: FUTURE</div>
+                    </div>
+
+                    <!-- Phase 5 -->
+                    <div class="blueprint-card" style="transform: none;">
+                        <div class="card-num">PHASE 5</div>
+                        <h3 style="font-size: 15px; letter-spacing: 1px;">Useful Quantum Applications</h3>
+                        <p style="font-size: 13px; line-height: 1.5; min-height: 72px;">Deployment of scalable logical quantum systems for scientific and industrial workloads.</p>
+                        <div class="card-status" style="color: var(--color-text-muted); font-size: 10px;"><span class="pulse-dot" style="background-color: var(--color-text-muted);"></span> STATUS: LONG-TERM</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: SECTION 05 — RESEARCH & SCIENCE (Terminal / CLI) -->
+        <section id="operations" class="scroll-section">
+            <div class="section-layout">
+                <div class="col-content reveal-left">
+                    <div class="section-header">
+                        <span class="section-index">05 // RESEARCH & SCIENCE</span>
+                        <h2 class="section-title">Research-Driven Engineering</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                    
+                    <p class="console-descr">
+                        Heisenberg Research operates at the intersection of quantum physics, superconducting hardware, systems engineering, and computational architecture.
+                    </p>
+                    <p class="console-descr" style="margin-top: -15px; font-size: 14.5px; color: var(--color-text-muted);">
+                        Our work focuses on: noise-biased quantum systems, cat qubit architectures, logical qubit scaling, LDPC-compatible layouts, quantum control systems, hardware-efficient fault tolerance, and quantum runtime infrastructure.
+                    </p>
+                    
+                    <h3 style="font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--color-text-title); margin: 20px 0 10px 0; border-top: var(--border-clean); padding-top: 15px;">
+                        Scientific Philosophy
+                    </h3>
+                    <p class="console-descr" style="font-size: 14px; color: var(--color-text-muted); margin-bottom: 25px;">
+                        We believe scalable quantum computing will require deep integration between hardware architecture, error correction, control systems, and software infrastructure. The future of useful quantum computing will not emerge from isolated components. It will emerge from fully integrated systems.
+                    </p>
+                    
+                    <a href="Achieving-the-Impossible-Heisenberg-Research-Whitepaper.pdf" target="_blank" class="btn-primary" style="display: inline-block; margin-bottom: 35px; text-decoration: none; text-align: center;">READ TECHNICAL WHITEPAPER</a>
+                    
+                    <!-- Section 06: Why Heisenberg Telemetry HUD Card -->
+                    <div class="telemetry-hud-card" style="font-family: var(--font-heading); font-size: 13.5px; line-height: 1.6; padding: 25px;">
+                        <h4 style="font-family: var(--font-mono); font-size: 10px; color: var(--color-neon); letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase;">SECTION 06 // WHY OUR APPROACH MATTERS</h4>
+                        <p style="margin-bottom: 10px; color: var(--color-text-title); font-weight: bold;">
+                            The defining challenge in quantum computing is not simply increasing qubit count. It is building scalable logical qubits capable of sustaining reliable computation.
+                        </p>
+                        <p style="margin-bottom: 10px; color: var(--color-text-muted); font-size: 13px;">
+                            Heisenberg Research focuses on hardware-efficient fault tolerance through stabilized cat qubit architectures designed to reduce operational complexity while accelerating the path toward useful quantum systems.
+                        </p>
+                        <p style="font-size: 12.5px; color: var(--color-text-muted); font-size: 13px;">
+                            Our approach combines: quantum hardware, cryogenic infrastructure, error correction architecture, compiler systems, runtime orchestration, and logical scalability into a unified full-stack platform.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-visual reveal-right">
+                    <div class="terminal-frame">
+                        <div class="terminal-bar">
+                            <div class="window-btns">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="window-title">HEISENBERG-SYS@TELEMETRY ~ ROOT</span>
+                        </div>
+                        
+                        <div class="terminal-body" id="console-body">
+                            <div class="log-line text-system">[SYS INIT] HEISENBERG CORE CONNECTED...</div>
+                            <div class="log-line text-system">[SYS INIT] CAVITY PUMP: 2-PHOTON COHERENCE LOCKED [OK]</div>
+                            <div class="log-line text-warning">[WARN] DETECTING SLIGHT PHASE DRIFT - ACTIVE MITIGATION ENGAGED</div>
+                            <div class="log-line text-system">---------------------------------------------------------</div>
+                            <div class="log-line text-green">WELCOME OPERATOR. TYPE 'help' FOR TESTBED TELEMETRY CONTROLS.</div>
+                            <div class="log-line"> </div>
+                            
+                            <!-- Input Prompt -->
+                            <div class="prompt-line" id="prompt-container">
+                                <span class="prompt-symbol">HEISENBERG:~$</span>
+                                <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: SECTION 07 — PARTNERSHIPS (Contact / Comms Portal) -->
+        <section id="clearance" class="scroll-section">
+            <div class="section-layout">
+                <div class="col-content reveal-left">
+                    <div class="section-header">
+                        <span class="section-index">07 // PARTNERSHIPS</span>
+                        <h2 class="section-title">Research & Strategic Partnerships</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                    
+                    <p class="clearance-intro">
+                        We collaborate with researchers, institutions, laboratories, and industry partners exploring the future of scalable quantum systems.
+                    </p>
+
+                    <div class="tech-badge-row" style="flex-wrap: wrap; gap: 15px;">
+                        <div class="tech-badge" style="flex: 1 1 200px; padding: 15px 20px;">
+                            <span class="badge-accent"></span>
+                            <h4 style="font-size: 11px;">HARDWARE</h4>
+                            <p style="font-size: 11px;">Quantum hardware research & Cryogenic engineering</p>
+                        </div>
+                        <div class="tech-badge" style="flex: 1 1 200px; padding: 15px 20px;">
+                            <span class="badge-accent"></span>
+                            <h4 style="font-size: 11px;">SOFTWARE</h4>
+                            <p style="font-size: 11px;">Compiler infrastructure & Quantum algorithms</p>
+                        </div>
+                        <div class="tech-badge" style="flex: 1 1 200px; padding: 15px 20px;">
+                            <span class="badge-accent"></span>
+                            <h4 style="font-size: 11px;">APPLICATIONS</h4>
+                            <p style="font-size: 11px;">Materials simulation & Applied quantum computing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-visual reveal-right">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h3>CONNECT WITH HEISENBERG</h3>
+                            <p>Request technical papers, research discussions, architecture briefings, or partnership conversations.</p>
+                        </div>
+                        
+                        <form id="request-clearance-form" onsubmit="event.preventDefault(); triggerFormSubmission();">
+                            <div class="form-group">
+                                <label for="operator-name">NAME</label>
+                                <input type="text" id="operator-name" required placeholder="e.g. Dr. Vance" autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="operator-email">EMAIL</label>
+                                <input type="email" id="operator-email" required placeholder="e.g. vance@organization.org" autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="operator-org">ORGANIZATION</label>
+                                <input type="text" id="operator-org" required placeholder="e.g. Stanford University" autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="clearance-level">AREA OF INTEREST</label>
+                                <select id="clearance-level">
+                                    <option value="Research Collaboration">Research Collaboration</option>
+                                    <option value="Hardware Partnership">Hardware Partnership</option>
+                                    <option value="Quantum Software">Quantum Software</option>
+                                    <option value="Strategic Partnership">Strategic Partnership</option>
+                                    <option value="Talent & Recruitment">Talent & Recruitment</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="encryption-request">MESSAGE</label>
+                                <textarea id="encryption-request" rows="3" required placeholder="Outline your proposal or research query..."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn" id="submit-btn">
+                                <span class="btn-text">INITIALIZE TRANSMISSION</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-bar" style="padding: 40px 60px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: start;">
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div class="logo-text" style="font-size: 20px; font-weight: 800; letter-spacing: 2px;">HEISENBERG <span class="logo-accent">RESEARCH</span></div>
+                <p style="color: var(--color-text-muted); font-size: 13px; max-width: 450px; line-height: 1.5; font-family: var(--font-heading);">
+                    Building hardware-efficient fault-tolerant quantum computing systems.
+                </p>
+                <div style="font-size: 10px; color: var(--color-text-dark); margin-top: 15px;">
+                    &copy; 2026 HEISENBERG RESEARCH. ALL RIGHTS RESERVED.
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 12px; font-family: var(--font-heading);">
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <span style="font-family: var(--font-mono); color: var(--color-neon); font-size: 9px; letter-spacing: 1px; text-transform: uppercase;">Hardware Layer</span>
+                    <a href="#intro-countdown" style="color: var(--color-text-muted); text-decoration: none;" class="nav-link">Quantum Hardware</a>
+                    <a href="#why-cat-qubits" style="color: var(--color-text-muted); text-decoration: none;" class="nav-link">Logical Architectures</a>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <span style="font-family: var(--font-mono); color: var(--color-neon); font-size: 9px; letter-spacing: 1px; text-transform: uppercase;">Software Layer</span>
+                    <a href="#architecture" style="color: var(--color-text-muted); text-decoration: none;" class="nav-link">Compiler Infrastructure</a>
+                    <a href="#operations" style="color: var(--color-text-muted); text-decoration: none;" class="nav-link">Quantum Runtime Systems</a>
+                </div>
+            </div>
+        </footer>
+</main>
+
+    <!-- Main Logic Script -->
+    <script src="script.js?v=8"></script>
+</body>
+</html>
